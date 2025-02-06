@@ -17,7 +17,7 @@ ipv6: false
 allow-lan: true
 unified-delay: false
 tcp-concurrent: true
-external-controller: 127.0.0.1:9001
+external-controller: 0.0.0.0:9100
 
 find-process-mode: strict
 global-client-fingerprint: chrome
@@ -94,7 +94,7 @@ proxy-groups:
 
   - name: 哔哩哔哩
     type: select
-    proxies: [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,直连]
+    proxies: [直连]
 
   - name: 巴哈姆特
     type: select
@@ -122,7 +122,7 @@ proxy-groups:
 
   - name: 其他
     type: select
-    proxies:  [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,直连]
+    proxies:  [直连,默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,直连]
 
   #分隔,下面是地区分组
   - name: 香港

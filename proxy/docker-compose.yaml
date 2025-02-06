@@ -3,11 +3,18 @@ services:
   metacubexd:
     container_name: metacubexd
     image: ghcr.io/metacubex/metacubexd
+    ports:
+      - '9200:80'
     restart: always
+    depends_on:
+      - meta
 
   meta:
     container_name: meta
     image: docker.io/metacubex/mihomo:Alpha
+    ports:
+      - '9000:9000'
+      - '9100:9100'
     restart: always
     volumes:
       - ./config.yaml:/root/.config/mihomo/config.yaml
