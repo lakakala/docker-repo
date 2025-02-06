@@ -1,0 +1,11 @@
+id: proxy
+proxys:
+  - name: meta-proxy-port
+    port: 9000
+    direct-port: 9000
+  - name: meta-control-port
+    port: 9100
+    direct-port: 9100
+  - name: metacubexd-ui-port
+    port: 80
+    direct-port: 9200
