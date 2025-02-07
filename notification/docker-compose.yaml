@@ -1,0 +1,10 @@
+
+services:
+  bark:
+    container_name: bark-server
+    image: finab/bark-server
+    volumes:
+      - bark-data:/data
+
+volumes:
+  bark-data:
